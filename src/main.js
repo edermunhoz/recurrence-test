@@ -9,8 +9,4 @@ Vue.use(VueResource)
 const router = new VueRouter()
 router.map(RouterConfig)
 
-router.redirect({
-  '*': '/'
-})
-
 router.start(App, 'App')
