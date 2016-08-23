@@ -8,26 +8,22 @@
       <p>
         Welcome to your Vue.js app!
       </p>
-      <form action="/" accept-charset="UTF-8" method="post" role="form">
+      <form action="/" class="ls-form ls-login-form" accept-charset="UTF-8" method="post" role="form">
         <fieldset>
-          <div class="form-group">
-            <input class="form-control" placeholder="E-mail" type="email" id="email" name="email" required>
+          <div class="form-group ls-label">
+            <b class="ls-label-text ls-hidden-accessible">Usuário</b>
+            <input class="form-control ls-login-bg-user ls-field-lg" placeholder="E-mail" type="email" id="email" name="email" required>
           </div>
-          <div class="form-group">
-            <input class="form-control" placeholder="Senha" name="password" type="password" value="" required>
+          <div class="form-group ls-label">
+            <b class="ls-label-text ls-hidden-accessible">Senha</b>
+            <input class="form-control ls-login-bg-password ls-field-lg" placeholder="Senha" name="password" type="password" value="" required>
           </div>
-          <div class="checkbox">
-            <label>
-              <input name="remember" type="checkbox" value="Lembrar-me"> Lembrar-me
-            </label>
-          </div>
-          <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+          <p><a class="ls-login-forgot" href="forgot-password">Esqueci minha senha</a></p>
+          <input class="btn btn-lg btn-success btn-block ls-btn-primary ls-btn-block ls-btn-lg" type="submit" value="Login">
         </fieldset>
       </form>
-      <br clear="all"/>
-      <p>
-        <a href="#">Esqueci minha senha</a>
-      </p>
+      <br clear="all">
+      <p class="ls-txt-center ls-login-signup">Não possui um usuário na Locaweb? <a href="#">Cadastre-se agora</a></p>
     </div>
   </div>
 </template>
