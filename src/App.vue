@@ -3,7 +3,7 @@
     <!-- Barra de Notificações -->
     <div class="ls-notification-topbar">
       <!-- Dropdown com detalhes da conta de usuário -->
-      <useraccount></useraccount>
+      <!-- <useraccount></useraccount> -->
     </div>
     <span class="ls-show-sidebar ls-ico-menu"></span>
     <h1 class="ls-brand-name">
@@ -13,37 +13,34 @@
       </a>
     </h1>
   </header>
-<aside class="ls-sidebar">
-  <useraccount></useraccount>
+  <aside class="ls-sidebar">
+    <!-- <useraccount></useraccount> -->
 
-  <div class="ls-sidebar-inner">
-    <a href="" class="ls-go-prev"><span class="ls-text">Voltar à lista de serviços</span></a>
-
-    <nav class="ls-menu" role="navigation">
-      <ul role="menu">
-         <li><a href="" class="ls-ico-dashboard" title="Dashboard" role="menuitem">Dashboard</a></li>
-         <li><a href="" class="ls-ico-users" title="Clientes" role="menuitem">Clientes</a></li>
-         <li><a href="" class="ls-ico-stats" title="Relatórios da revenda" role="menuitem">Relatórios da revenda</a></li>
-         <li class="ls-submenu-parent" aria-expanded="false" aria-hidden="true">
-          <a href="#" class="ls-ico-cog" title="Configurações" role="menuitem">Configurações</a>
-          <ul class="ls-submenu" role="menu">
-            <li><a href="" class="ls-submenu-item" role="menuitem">Domínios da Revenda</a></li>
-            <li><a href="" class="ls-submenu-item" role="menuitem">E-mail de Remetente</a></li>
-            <li><a href="" class="ls-submenu-item" role="menuitem">Aparência</a></li>
-            <li><a href="" class="ls-submenu-item" role="menuitem">Atendimento</a></li>
-            <li><a href="" class="ls-submenu-item" role="menuitem">Chave de acesso para API</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <span class="ls-sidebar-toggle ls-ico-shaft-left"></span>
-</aside>
+    <div class="ls-sidebar-inner">
+      <nav class="ls-menu" role="navigation">
+        <ul role="menu">
+           <li><a href="" class="ls-ico-dashboard" title="Dashboard" role="menuitem">Dashboard</a></li>
+           <li><a href="" class="ls-ico-users" title="Clientes" role="menuitem">Clientes</a></li>
+           <li><a href="" class="ls-ico-stats" title="Relatórios da revenda" role="menuitem">Relatórios da revenda</a></li>
+           <li class="ls-submenu-parent" aria-expanded="false" aria-hidden="true">
+            <a href="#" class="ls-ico-cog" title="Configurações" role="menuitem">Configurações</a>
+            <ul class="ls-submenu" role="menu">
+              <li><a href="" class="ls-submenu-item" role="menuitem">Domínios da Revenda</a></li>
+              <li><a href="" class="ls-submenu-item" role="menuitem">E-mail de Remetente</a></li>
+              <li><a href="" class="ls-submenu-item" role="menuitem">Aparência</a></li>
+              <li><a href="" class="ls-submenu-item" role="menuitem">Atendimento</a></li>
+              <li><a href="" class="ls-submenu-item" role="menuitem">Chave de acesso para API</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <span class="ls-sidebar-toggle ls-ico-shaft-left"></span>
+  </aside>
   <main id="app" class="ls-main">
     <div class="container-fluid">
       <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
-      <!-- <input type="text" placeholder="Nome do usuário" v-model="user"> -->
-      <router-view></router-view>
+      <router-view transition transition-mode="out-in"></router-view>
     </div>
   </main>
 </template>
@@ -92,5 +89,11 @@ export default {
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-}
+  }
+  .v-transition {
+    transition: opacity .1s ease-out;
+  }
+  .v-enter, .v-leave {
+    opacity: 0;
+  }
 </style>

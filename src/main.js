@@ -11,8 +11,18 @@ router.map(RouterConfig)
 
 router.start(App, 'App')
 
+Vue.component('greeting', {
+  template: '#greeting-template'
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  components: { App }
+  components: { App },
+  data: {
+    admin: 'Recurrence',
+    description: 'Descrição ou outro nome',
+    user: 'João Maneiro',
+    username: 'johnkennedy'
+  }
 })
