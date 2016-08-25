@@ -18,15 +18,4 @@ const RouterConfig = {
   }
 }
 
-export default {
-  data () {
-    return {
-      admin: 'Recurrence',
-      description: 'Descrição ou outro nome',
-      user: 'João Maneiro',
-      username: 'johnkennedy'
-    }
-  }
-}
-
 export default RouterConfig
