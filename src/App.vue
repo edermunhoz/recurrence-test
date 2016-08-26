@@ -1,9 +1,32 @@
 <template>
   <header class="ls-topbar">
-    <!-- Barra de Notificações -->
     <div class="ls-notification-topbar">
-      <!-- Dropdown com detalhes da conta de usuário -->
-      <!-- <useraccount></useraccount> -->
+      <div class="ls-topbar">
+        <div class="ls-notification-topbar">
+          <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+            <a href="" class="ls-ico-user">
+            <img src="#" alt="">
+            <span class="ls-name">{{user}}</span>
+            ({{username}})
+            </a>
+            <nav class="ls-dropdown-nav ls-user-menu" aria-hidden="true">
+              <ul>
+                <li><a v-link="{ path: '/' }" role="option">Meus dados</a></li>
+                <li><a v-link="{ path: '/' }" role="option">Faturas</a></li>
+                <li><a v-link="{ path: '/' }" role="option">Planos</a></li>
+                <li><a v-link="{ path: '/login' }" role="option">Sair</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <span class="ls-show-sidebar ls-ico-menu"></span>
+        <h1 class="ls-brand-name">
+          <a v-link="{ path: '/' }" class="ls-ico-earth">
+          <small>{{description}}</small>
+          {{admin}}
+          </a>
+        </h1>
+      </div>
     </div>
     <span class="ls-show-sidebar ls-ico-menu"></span>
     <h1 class="ls-brand-name">
@@ -13,33 +36,36 @@
       </a>
     </h1>
   </header>
-  <aside class="ls-sidebar">
-    <!-- <useraccount></useraccount> -->
+<aside class="ls-sidebar">
+  <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
+    <a v-link="{ path: '/' }" class="ls-ico-user">
+      <img src="#" alt="">
+      <span class="ls-name">{{user}}</span>
+      ({{username}})
+    </a>
 
-    <div class="ls-sidebar-inner">
-      <nav class="ls-menu" role="navigation">
-        <ul role="menu">
-           <li><a href="" class="ls-ico-dashboard" title="Dashboard" role="menuitem">Dashboard</a></li>
-           <li><a href="" class="ls-ico-users" title="Clientes" role="menuitem">Clientes</a></li>
-           <li><a href="" class="ls-ico-stats" title="Relatórios da revenda" role="menuitem">Relatórios da revenda</a></li>
-           <li class="ls-submenu-parent" aria-expanded="false" aria-hidden="true">
-            <a href="#" class="ls-ico-cog" title="Configurações" role="menuitem">Configurações</a>
-            <ul class="ls-submenu" role="menu">
-              <li><a href="" class="ls-submenu-item" role="menuitem">Domínios da Revenda</a></li>
-              <li><a href="" class="ls-submenu-item" role="menuitem">E-mail de Remetente</a></li>
-              <li><a href="" class="ls-submenu-item" role="menuitem">Aparência</a></li>
-              <li><a href="" class="ls-submenu-item" role="menuitem">Atendimento</a></li>
-              <li><a href="" class="ls-submenu-item" role="menuitem">Chave de acesso para API</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <span class="ls-sidebar-toggle ls-ico-shaft-left"></span>
-  </aside>
+    <nav class="ls-dropdown-nav ls-user-menu" aria-hidden="true">
+      <ul>
+        <li><a v-link="{ path: '/' }" role="option">Meus dados</a></li>
+        <li><a v-link="{ path: '/' }" role="option">Faturas</a></li>
+        <li><a v-link="{ path: '/' }" role="option">Planos</a></li>
+        <li><a v-link="{ path: '/' }" role="option">Sair</a></li>
+       </ul>
+    </nav>
+  </div>
+
+  <div class="ls-sidebar-inner">
+    <nav class="ls-menu" role="navigation">
+      <ul role="menu">
+         <li><a v-link="{ path: '/' }" class="ls-ico-home" title="Home" role="menuitem">Home</a></li>
+         <li><a v-link="{ path: '/about' }" class="ls-ico-list" title="Cadastrar planos" role="menuitem">Cadastrar planos</a></li>
+      </ul>
+    </nav>
+  </div>
+</aside>
   <main id="app" class="ls-main">
     <div class="container-fluid">
-      <h1 class="ls-title-intro ls-ico-home">Página inicial</h1>
+      <h1 class="ls-title-intro ls-ico-home">{{pageTitle}}</h1>
       <router-view transition transition-mode="out-in"></router-view>
     </div>
   </main>
@@ -51,7 +77,8 @@ export default {
       admin: 'Recurrence',
       description: 'Descrição ou outro nome',
       user: 'João Maneiro',
-      username: 'johnkennedy'
+      username: 'johnkennedy',
+      pageTitle: 'Página inicial'
     }
   }
 }
