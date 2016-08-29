@@ -1,0 +1,120 @@
+{
+  "breweries": [
+    {
+      "id": 1,
+      "name": "(512) Brewing Company",
+      "address1": "407 Radam, F200",
+      "address2": "",
+      "city": "Austin",
+      "state": "Texas",
+      "code": "78745",
+      "country": "United States",
+      "phone": "512.707.2337",
+      "website": "http://512brewing.com/",
+      "filepath": "",
+      "descript": "(512) Brewing Company is a microbrewery located in the heart of Austin that brews for the community using as many local, domestic and organic ingredients as possible.",
+      "add_user": 0,
+      "last_mod": "2010-07-22 20:00:20",
+      "geocode": {
+        "id": 1,
+        "breweryId": 1,
+        "latitude": 30.2234,
+        "longitude": -97.7697,
+        "accuracy": "ROOFTOP"
+      }
+    },
+    {
+      "id": 2,
+      "name": "21st Amendment Brewery Cafe",
+      "address1": "563 Second Street",
+      "address2": "",
+      "city": "San Francisco",
+      "state": "California",
+      "code": "94107",
+      "country": "United States",
+      "phone": "1-415-369-0900",
+      "website": "http://www.21st-amendment.com/",
+      "filepath": "",
+      "descript": "The 21st Amendment Brewery offers a variety of award winning house made brews and American grilled cuisine in a comfortable loft like setting. Join us before and after Giants baseball games in our outdoor beer garden. A great location for functions and parties in our semi-private Brewers Loft. See you soon at the 21A!",
+      "add_user": 0,
+      "last_mod": "2010-10-24 13:54:07",
+      "geocode": {
+        "id": 2,
+        "breweryId": 2,
+        "latitude": 37.7825,
+        "longitude": -122.393,
+        "accuracy": "ROOFTOP"
+      }
+    },
+    {
+      "id": 3,
+      "name": "3 Fonteinen Brouwerij Ambachtelijke Geuzestekerij",
+      "address1": "Hoogstraat 2A",
+      "address2": "",
+      "city": "Beersel",
+      "state": "Vlaams Brabant",
+      "code": "",
+      "country": "Belgium",
+      "phone": "32-02-/-306-71-03",
+      "website": "http://www.3fonteinen.be/index.htm",
+      "filepath": "",
+      "descript": "",
+      "add_user": 0,
+      "last_mod": "2010-07-22 20:00:20",
+      "geocode": {
+        "id": 3,
+        "breweryId": 3,
+        "latitude": 50.7668,
+        "longitude": 4.3081,
+        "accuracy": "RANGE_INTERPOLATED"
+      }
+    }
+  ],
+  "beers": [
+    {
+      "id": 5735,
+      "breweryId": 1,
+      "name": "(512) Wit",
+      "cat_id": 5,
+      "style_id": 67,
+      "abv": 5.2,
+      "ibu": 0,
+      "srm": 0,
+      "upc": 0,
+      "filepath": "",
+      "descript": "Made in the style of the Belgian wheat beers that are so refreshing, (512) Wit is a hazy ale spiced with coriander and domestic grapefruit peel. 50% US Organic 2-row malted barley and 50% US unmalted wheat and oats make this a light, crisp ale well suited for any occasion.",
+      "add_user": 0,
+      "last_mod": "2010-07-22 20:00:20"
+    },
+    {
+      "id": 5736,
+      "breweryId": 1,
+      "name": "(512) Pale",
+      "cat_id": 3,
+      "style_id": 26,
+      "abv": 5.8,
+      "ibu": 0,
+      "srm": 0,
+      "upc": 0,
+      "filepath": "",
+      "descript": "With Organic 2-row malted barley, (512) Pale is a copper colored American Pale Ale that balances earthy hop bitterness and hop flavor with a rich malty body.",
+      "add_user": 0,
+      "last_mod": "2010-07-22 20:00:20"
+    },
+    {
+      "id": 5737,
+      "breweryId": 1,
+      "name": "(512) IPA",
+      "cat_id": 3,
+      "style_id": 31,
+      "abv": 7,
+      "ibu": 0,
+      "srm": 0,
+      "upc": 0,
+      "filepath": "",
+      "descript": "(512) India Pale Ale is a big, aggressively dry-hopped American IPA with smooth bitterness (~65 IBU) balanced by medium maltiness. Organic 2-row malted barley, loads of hops, and great Austin water create an ale with apricot and vanilla aromatics that lure you in for more.",
+      "add_user": 0,
+      "last_mod": "2010-07-22 20:00:20"
+    }
+  ]
+}
